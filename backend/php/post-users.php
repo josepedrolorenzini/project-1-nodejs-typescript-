@@ -1,14 +1,14 @@
 <?php 
 header("Content-Type: application/json") ;
 
-// PHP ya juntó todos los chunks por ti 👇
+// PHP Chunk 👇
 $rawBody = file_get_contents("http://localhost:4040/users");
 
-// Lee el body REAL del POST
+// Read the body 
 // $rawBody = file_get_contents("php://input");
 
 
-// Intentamos convertir JSON → array
+//  convertir JSON → array
 $data = json_decode($rawBody, true);
 
 if (!$data) {
