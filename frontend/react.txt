@@ -1,3 +1,4 @@
+# React project 1
 # 1. Create a new React + Vite app
 npm create vite@latest my-react-app -- --template react   # JS[web:7][web:9]
 # or for TypeScript:
