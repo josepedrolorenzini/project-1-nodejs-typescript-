@@ -9,6 +9,8 @@ lerna-debug.log*
 
 # folders
 node_modules
+./backend/node_modules
+./backend/dist
 dist
 ./dist/*
 ./public/
