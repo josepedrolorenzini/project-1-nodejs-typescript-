@@ -1,4 +1,4 @@
-# project-1-nodejs-typescript
+# Project-1-nodejs-typescript
 
 A full-stack web application built with **React**, **Node.js**, and **TypeScript**, using **Supabase** and **Neon Postgres** as the database layer. Deployed on AWS infrastructure.
 
