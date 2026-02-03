@@ -17,7 +17,7 @@ dist
 ./public/images/
 dist-ssr
 *.local
-./backend/db/*
+./backend/db/db.ts
 
 # Editor directories and files
 .vscode/*
