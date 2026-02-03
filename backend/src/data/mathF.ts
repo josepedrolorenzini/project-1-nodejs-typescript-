@@ -3,3 +3,15 @@ const whatsMyAge = (): number => {
 };
 
 console.log(`I am ${whatsMyAge()} years old today!`);
+
+
+
+function repeatSyllableSong(syllable: string, repeatNumber: number): void {
+  let song: string = '';
+  for (let i = 0; i <= repeatNumber ; i++) {
+    song += syllable; 
+  } 
+  console.log(song);
+}
+
+repeatSyllableSong('la', 4);

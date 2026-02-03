@@ -1,5 +1,5 @@
 import { pool } from "../db/db.js";
-import type { User  } from "../types/user";
+import type { User  } from "../types/user.js";
 
 
 

@@ -1,12 +1,28 @@
 import * as http from "http";
-import type { Customer } from "./types/customers";
-import { getUsers , postUsers } from "./data/usuarios.js";
 import { pool } from "./db/db.js";
+import * as path from "node:path" ;
+import {parse} from "node:path" ;
+import { fileURLToPath }  from "node:url";
+import * as url from "node:url"
+import * as querystring from "node:querystring";
+import type { Customer } from "./types/customers.js";
+import { getUsers , postUsers } from "./data/usuarios.js";
 import { testPostgresConnection } from "./testDB/index.js";
+import  {readCustomer}  from './testDB/supaBaseQueries.js'
+import  dotenv from "dotenv";
 
+
+// get directory names
+const __filename = fileURLToPath(import.meta.url) ;
+const __dirname  = path.dirname(__filename);
+dotenv.config();
+
+// puerto 4040
 const PORT = 4040 ;
 
 const server = http.createServer( async (req: any, res: any) => {
+  // allow access from react front end
+   res.setHeader('Access-Control-Allow-Origin', '*');
 
   // GET / Home
   if (req.method === "GET" && req.url === "/") {
@@ -14,6 +30,15 @@ const server = http.createServer( async (req: any, res: any) => {
     res.end("Hello World!");
     return; // 
   }   // GET / Home
+
+
+  // *** SUPABASE *** 
+         if(req.url.startsWith("/api/supabase") && req.method === "GET" ){
+              res.writeHead(200,{"Content-Type":"text/plain"});
+              res.end(JSON.stringify(await readCustomer()))
+              return ;
+         }
+  // *** SUPABASE *** 
 
     // GET / postgres users 
   if(req.url === '/users' && req.method === "GET"){
