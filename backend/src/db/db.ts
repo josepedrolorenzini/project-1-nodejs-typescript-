@@ -5,7 +5,7 @@ export const pool = new Pool({
         host: 'localhost',
         port: 5432,
         user: 'postgres',
-        password: 'xxx',
+        password: 'postgres',
         database: 'tsnode',
 }) ; 
 
