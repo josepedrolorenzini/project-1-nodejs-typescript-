@@ -1,7 +1,7 @@
 import * as http from "http";
 import type { Customer } from "./types/customers";
 import { getUsers , postUsers } from "./data/usuarios.js";
-import { pool } from "./db/db-bkp.js";
+import { pool } from "./db/db.js";
 import { testPostgresConnection } from "./testDB/index.js";
 
 const PORT = 4040 ;
