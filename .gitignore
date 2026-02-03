@@ -17,10 +17,13 @@ dist
 ./public/images/
 dist-ssr
 *.local
-./backend/src/db/db.ts
-./backend/src/db/db-bkp.ts
-./backend/src/db
+# Ignore specific DB files
+backend/src/db/db.ts
 backend/src/db/db-bkp.ts
+
+# ignore entire db folder (ignore)
+backend/src/db/
+
 
 # Editor directories and files
 .vscode/*
@@ -35,4 +38,4 @@ backend/src/db/db-bkp.ts
 
 # Environment variables
 .env
-.env.test
+.env.testbackend/src/db/
