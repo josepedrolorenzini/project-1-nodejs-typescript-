@@ -1,4 +1,4 @@
-import { pool } from "../db/db.js"; 
+import { pool } from "../db/db-bkp.js"; 
 
 
 export async function testPostgresConnection(){

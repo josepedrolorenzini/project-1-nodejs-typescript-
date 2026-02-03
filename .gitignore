@@ -20,6 +20,7 @@ dist-ssr
 ./backend/src/db/db.ts
 ./backend/src/db/db-bkp.ts
 ./backend/src/db
+backend/src/db/db-bkp.ts
 
 # Editor directories and files
 .vscode/*
