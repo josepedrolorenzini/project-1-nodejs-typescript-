@@ -1,0 +1,31 @@
+# React project 1
+# 1. Create a new React + Vite app
+npm create vite@latest my-react-app -- --template react   # JS[web:7][web:9]
+# or for TypeScript:
+# npm create vite@latest my-react-app -- --template react-ts
+
+Use the React + TypeScript template instead:
+
+bash
+npm create vite@latest my-react-app -- --template react-ts
+# or (equivalent)
+# npm create vite@latest my-react-app --template react-ts
+
+or pnpm
+pnpm create vite my-react-app --template react-ts
+# or with the explicit version:
+# pnpm create vite@latest my-react-app --template react-ts
+
+cd my-react-app
+pnpm install
+pnpm dev   # or: pnpm run dev
+
+
+# 2. Go into the project
+cd my-react-app
+
+# 3. Install dependencies
+npm install
+
+# 4. Start dev server
+npm run dev
