@@ -18,6 +18,8 @@ dist
 dist-ssr
 *.local
 ./backend/db/db.ts
+./backend/db/db-bkp.ts
+./backend/db
 
 # Editor directories and files
 .vscode/*
